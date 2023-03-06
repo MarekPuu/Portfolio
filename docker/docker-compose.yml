@@ -1,0 +1,40 @@
+version: '3'
+services:
+  reverse-proxy:
+    image: nginx:latest
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - frontpage
+      - app
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./certbot/www:/var/www/certbot/:ro
+      - ./certbot/conf/:/etc/nginx/ssl/:ro
+
+  frontpage:
+    build:
+      context: ../portfolio_frontpage
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8081:8081
+    image: portfolio_frontpage
+    container_name: portfolio_frontpage_container
+    # command: nginx -g daemon off
+
+  app:
+    build:
+      context: ../portfolio_app
+      dockerfile: docker/Dockerfile
+    ports:
+      - 8082:8082
+    image: portfolio_app
+    container_name: portfolio_app_container
+    # command: nginx -g daemon off
+  certbot:
+    image: certbot/certbot:latest
+    # command: docker compose run --rm  certbot certonly --webroot --webroot-path /var/www/certbot/ -email marek.puurunen@gmail.com --agree-tos --no-eff-email -d portfoliowebapp.azurewebsites.net
+    volumes:
+      - ./certbot/www/:/var/www/certbot/:rw
+      - ./certbot/conf/:/etc/letsencrypt/:rw

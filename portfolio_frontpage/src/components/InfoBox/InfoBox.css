@@ -1,0 +1,20 @@
+.infobox-container {
+  position: relative;
+  background-color: beige;
+}
+.infobox-container:hover .infobox-title-container {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+.infobox-title-container {
+  transition: opacity 0.1s ease-in;
+  opacity: 0;
+  background-color: red;
+  padding: 5px 10px;
+  position: absolute;
+  width: max-content;
+  max-width: 150px;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, -100%);
+}

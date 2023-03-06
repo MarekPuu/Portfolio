@@ -1,0 +1,37 @@
+version: '3'
+services:
+  reverse-proxy:
+    image: nginx:latest
+    ports:
+      - 8080:8080
+    depends_on:
+      - frontpage
+      - app
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/conf.d/default.conf:ro
+
+  frontpage:
+    build:
+      context: ../portfolio_frontpage
+      dockerfile: docker/Dockerfile.dev
+    ports:
+      - 3000:3000
+    image: frontpage:dev
+    volumes:
+      - ../portfolio_frontpage/src:/app/src
+    container_name: portfolio_frontpage_container_dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+
+  app:
+    build:
+      context: ../portfolio_app
+      dockerfile: docker/Dockerfile.dev
+    ports:
+      - 3001:3001
+    image: app:dev
+    volumes:
+      - ../portfolio_app/src:/app/src
+    container_name: portfolio_app_container_dev
+    environment:
+      - CHOKIDAR_USEPOLLING=true
