@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import './App.css';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import './index.css';
 import {
@@ -15,8 +13,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route index element={<FrontPage />} />
-      <Route path="/frontpage" element={<FrontPage />} />
-      <Route path="*" element={<NotFoundPage />} />
+      <Route path='*' element={<NotFoundPage />} />
     </Route>
   )
 );

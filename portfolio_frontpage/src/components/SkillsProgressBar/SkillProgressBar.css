@@ -1,0 +1,38 @@
+.skills_progressbar_container {
+  background-color: white;
+  height: 80px;
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px min(25px, 5%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.progressbar_title_container {
+  display: flex;
+  justify-content: space-between;
+}
+.progressbar_container {
+  width: 100%;
+  height: 15px;
+  margin: 0 auto;
+  border-radius: 2px;
+  overflow: hidden;
+  background-color: #d9d9d9;
+}
+.progressbar {
+  height: 15px;
+}
+.progressbar_animation {
+  animation: show_progressbar 1.5s;
+}
+@keyframes show_progressbar {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

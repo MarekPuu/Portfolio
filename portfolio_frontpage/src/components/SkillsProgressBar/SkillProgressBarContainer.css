@@ -1,0 +1,10 @@
+.skills_progressbar_container_elements:not(:first-child) {
+  margin-top: 15px;
+}
+.skills_progressbar_container_container {
+  height: fit-content;
+}
+.elementRef {
+  height: 0px;
+  width: 0px;
+}
