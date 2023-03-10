@@ -1,0 +1,9 @@
+.default_layout_container {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.default_layout_outlet {
+  flex: 1 0 auto;
+}

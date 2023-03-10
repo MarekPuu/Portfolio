@@ -1,4 +1,4 @@
-import React, { useEffect, useId, useRef } from 'react';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import './SkillProgressBar.css';
 
 interface IProps {
@@ -20,19 +20,19 @@ const SkillsProgressBar = ({ text, percentage, color, isOnScreen }: IProps) => {
   }, [isOnScreen]);
 
   return (
-    <div className='skills_progressbar_container'>
-      <div className='progressbar_title_container'>
+    <div className="skills_progressbar_container">
+      <div className="progressbar_title_container">
         <p>{text}</p>
         <p>{percentage}%</p>
       </div>
-      <div className='progressbar_container'>
+      <div className="progressbar_container">
         <div
           id={id}
           style={{
             background: isOnScreen || show.current ? `${color}` : '#d9d9d9',
             width: `${percentage}%`,
           }}
-          className='progressbar'
+          className="progressbar"
         ></div>
       </div>
     </div>

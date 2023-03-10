@@ -1,6 +1,7 @@
-.skills_progressbar_container_elements:not(:first-child) {
+.skills_progressbar_container_element:not(:first-of-type) {
   margin-top: 15px;
 }
+
 .skills_progressbar_container_container {
   height: fit-content;
 }

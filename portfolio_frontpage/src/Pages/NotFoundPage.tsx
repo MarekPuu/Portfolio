@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
   return (
-    <>
-      <h1>404</h1>
-      <h2>Not Found</h2>
+    <div className="not_found_page">
+      <div className="error_404">
+        <h1>404</h1>
+      </div>
+      <h2>Sivua ei löytynyt</h2>
       <Link replace to={'/'}>
-        Etusivu
+        Takaisin etusivulle
       </Link>
-    </>
+    </div>
   );
 };
 

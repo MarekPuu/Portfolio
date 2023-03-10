@@ -1,0 +1,16 @@
+.single_skill_container {
+  width: 100%;
+  height: 100%;
+  background: #d9d9d9;
+  border-radius: 10px;
+}
+.single_skill_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.single_skill_container img:hover {
+  transform: scale(1.1);
+}

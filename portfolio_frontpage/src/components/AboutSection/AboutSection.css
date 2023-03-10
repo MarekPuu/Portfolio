@@ -6,8 +6,9 @@
   margin: 0 auto;
   padding: 50px 0;
   display: flex;
+  flex-wrap: wrap;
 }
-.Skills_section_container {
+.skills_section_container {
   width: 50%;
 }
 .about_section {
@@ -23,4 +24,26 @@
 }
 .about_section p {
   color: white;
+}
+
+@media only screen and (max-width: 750px) {
+  .about_section {
+    text-align: center;
+  }
+  .skills_section_container {
+    width: 100%;
+    padding: 0 50px;
+  }
+  .about_section {
+    width: 100%;
+    padding: 50px 50px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .skills_section_container {
+    padding: 50px 0;
+  }
+  .about_section {
+    padding: 0;
+  }
 }

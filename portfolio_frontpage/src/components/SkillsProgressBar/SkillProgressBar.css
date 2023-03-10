@@ -13,7 +13,9 @@
 .progressbar_title_container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
+
 .progressbar_container {
   width: 100%;
   height: 15px;
@@ -34,5 +36,10 @@
   }
   to {
     transform: translateX(0);
+  }
+}
+@media only screen and (max-width: 750px) {
+  .skills_progressbar_container {
+    max-width: 600px;
   }
 }

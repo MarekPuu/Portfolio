@@ -4,13 +4,13 @@ import './AboutSection.css';
 
 const AboutSection = () => {
   return (
-    <section className='about_section_container'>
-      <div className='about_section_container_content'>
-        <div className='about_section'>
-          <div className='about_section_title'>
+    <section className="about_section_container">
+      <div className="about_section_container_content">
+        <div className="about_section">
+          <div className="about_section_title">
             <h1>Motivoitunut oppimaan, sekä luomaan uutta</h1>
           </div>
-          <div className='about_section_text'>
+          <div className="about_section_text">
             <p>
               Minua kiehtoo oppia uusia asioita ja samalla kehittää omaa
               osaamista ja haastaa itseäni. Tämän takia olen opiskellut
@@ -20,7 +20,7 @@ const AboutSection = () => {
             </p>
           </div>
         </div>
-        <div className='Skills_section_container'>
+        <div className="skills_section_container">
           <SkillsProgressBarContainer />
         </div>
       </div>

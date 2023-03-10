@@ -1,0 +1,106 @@
+.landingpage_section p {
+  font-size: 1rem;
+  padding: 20px 0;
+}
+
+.landingpage_section h1 {
+  font-size: 2.25rem;
+}
+
+.landingpage_section_container {
+  max-width: min(1440px, 90%);
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.landingpage_section_left_container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.landingpage_section_left_container_buttons {
+  display: flex;
+  align-items: center;
+}
+.landingpage_section_left_container_button:not(:first-child) {
+  margin-left: 20px;
+}
+.landingpage_section_left_container_button button {
+  border-radius: 5px;
+  background-color: var(--main-color);
+  color: white;
+  width: 200px;
+  height: 50px;
+}
+.landingpage_section_image_container {
+  width: 50%;
+  flex: 1 0 250px;
+}
+.landingpage_section_image {
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+.landingpage_section_image img {
+  height: 100%;
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1100px) {
+  .landingpage_section_left_container_buttons {
+    flex-wrap: wrap;
+  }
+  .landingpage_section_left_container_button:not(:first-child) {
+    margin-left: 0px;
+    margin-top: 3px;
+  }
+  .landingpage_section_left_container_button {
+    width: 100%;
+  }
+  .landingpage_section_left_container_button button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .landingpage_section_left_container {
+    width: max(100%, 500px);
+  }
+  .landingpage_section_image_container {
+    width: 100%;
+    padding: 0 50px;
+  }
+  .landingpage_section_image {
+    margin: auto;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .landingpage_section_image img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .landingpage_section_left_container {
+    width: 100%;
+    padding: 0;
+  }
+  .landingpage_section_image_container {
+    width: 100%;
+    padding: 0;
+  }
+  .landingpage_section_image {
+    margin: auto;
+    max-width: 100%;
+    margin-top: 50px;
+  }
+  .landingpage_section_image img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,71 @@
+.my_skills_container {
+  width: fit-content;
+  margin: auto;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.my_skills_container_grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas:
+    '0 1 2 3 4 5'
+    '6 j 8 k k a'
+    'b j c d e e'
+    'f g h i e e';
+}
+.my_skills_container_grid_j {
+  grid-area: j;
+}
+.my_skills_container_grid_k {
+  grid-area: k;
+}
+.my_skills_container_grid_e {
+  grid-area: e;
+}
+.my_skills_container_text {
+  writing-mode: vertical-rl;
+}
+.my_skills_container_text h1 {
+  font-size: 2rem;
+  padding-left: 50px;
+  font-weight: 400;
+}
+@media only screen and (max-width: 850px) {
+  .my_skills_container_grid {
+    grid-template-columns: repeat(6, 75px);
+    grid-template-rows: repeat(4, 75px);
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .my_skills_container_grid {
+    grid-template-columns: repeat(6, 50px);
+    grid-template-rows: repeat(4, 50px);
+  }
+  .my_skills_container {
+    padding: 0;
+    padding-bottom: 50px;
+    flex-direction: column;
+  }
+  .my_skills_container_text {
+    writing-mode: horizontal-tb;
+  }
+  .my_skills_container_text h1 {
+    font-size: 1.5rem;
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .my_skills_container_grid {
+    grid-template-columns: repeat(6, 40px);
+    grid-template-rows: repeat(4, 40px);
+  }
+  .my_skills_container_text h1 {
+    font-size: 1.2rem;
+    padding-left: 20px;
+  }
+}

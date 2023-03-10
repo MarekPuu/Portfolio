@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
+ENV VITE_APP_URL=http://app.localhost:8080
+
 EXPOSE 3000
 
 CMD [ "npm","run", "dev"]

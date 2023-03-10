@@ -8,12 +8,13 @@ import {
 } from 'react-router-dom';
 import NotFoundPage from './Pages/NotFoundPage';
 import FrontPage from './Pages/FrontPage';
+import DefaultLayout from './components/Layout/DefaultLayout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route element={<DefaultLayout />}>
       <Route index element={<FrontPage />} />
-      <Route path='*' element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Route>
   )
 );
