@@ -15,34 +15,36 @@ const Footer = () => {
   };
 
   return (
-    <div className="footer_container">
-      <div className="footer_container_logo_container">
-        <div className="logo">
+    <div className='footer_container'>
+      <div className='footer_container_logo_container'>
+        <div className='logo'>
           <a
-            target="_blank"
-            href="https://github.com/MarekPuu?tab=repositories"
+            target='_blank'
+            href='https://github.com/MarekPuu?tab=repositories'
           >
-            <img src={github} alt="github" />
+            <img src={github} alt='github' />
           </a>
         </div>
-        <div className="logo">
-          <a target="_blank" href="https://www.instagram.com/marek_puurunen/">
-            <img src={instagram} alt="instagram" />
+        <div className='logo'>
+          <a target='_blank' href='https://www.instagram.com/marek_puurunen/'>
+            <img src={instagram} alt='instagram' />
           </a>
         </div>
-        <div className="logo">
-          <a target="_blank" href="https://twitter.com/marek_puurunen">
-            <img src={twitter} alt="twitter" />
+        <div className='logo'>
+          <a target='_blank' href='https://twitter.com/marek_puurunen'>
+            <img src={twitter} alt='twitter' />
           </a>
         </div>
       </div>
-      <div className="footer_container_links">
+      <div className='footer_container_links'>
         <ul>
           <li>
-            <button onClick={openModal}>Ota yhteyttä</button>
+            <a href='mailto:marek.puurunen@gmail.com'>
+              <button onClick={openModal}>Ota yhteyttä</button>
+            </a>
           </li>
           <li>
-            <a target="_blank" href={`${import.meta.env.VITE_APP_URL}`}>
+            <a target='_blank' href={`${import.meta.env.VITE_APP_URL}`}>
               Siirry sovellukseen
             </a>
           </li>
@@ -51,7 +53,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="footer_container_copyright">
+      <div className='footer_container_copyright'>
         <p>© 2023 Marek Puurunen</p>
       </div>
     </div>
