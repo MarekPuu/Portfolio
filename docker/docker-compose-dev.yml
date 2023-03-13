@@ -1,6 +1,8 @@
 version: '3'
+name: 'MarekPuu_dev'
 services:
   reverse-proxy:
+    container_name: reverse_proxy_dev
     image: nginx:latest
     ports:
       - 8080:8080

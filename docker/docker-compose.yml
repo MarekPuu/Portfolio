@@ -1,6 +1,8 @@
-version: '3'
+version: '3.8'
+name: MarekPuu_production
 services:
   reverse-proxy:
+    container_name: reverse_proxy
     image: nginx:latest
     ports:
       - 80:80
@@ -16,10 +18,13 @@ services:
     build:
       context: ../portfolio_frontpage
       dockerfile: docker/Dockerfile
+      args:
+        APP_URL: http://app.localhost/
     ports:
       - 8081:8081
     image: portfolio_frontpage
     container_name: portfolio_frontpage_container
+
     # command: nginx -g daemon off
 
   app:
