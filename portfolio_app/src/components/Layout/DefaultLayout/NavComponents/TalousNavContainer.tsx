@@ -1,7 +1,10 @@
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
 
-import { List, ListItem, ListItemText, ListItemIcon } from '@mui/material';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemIcon from '@mui/material/ListItemIcon';
 
 import TalouseMenu from './TalousMenu';
 

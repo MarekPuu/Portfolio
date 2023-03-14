@@ -1,7 +1,20 @@
-import { TabContext, TabPanel } from '@mui/lab';
-import { Menu } from '@mui/material';
+import TabContext from '@mui/lab/TabContext';
+import TabPanel from '@mui/lab/TabPanel';
+import Menu from '@mui/material/Menu';
+
 import NavTabsAsetukset from './NavTabsAsetukset';
 import NavTabsTaloudet from './NavTabsTaloudet';
+
+interface IChoseTalousMenu {
+  anchorEl: null | HTMLElement;
+  open: boolean;
+  handleClose: Function;
+  tab: string;
+  selectedIndex: number;
+  handleTabChange: Function;
+  options: string[];
+  handleMenuItemClick: Function;
+}
 
 const ChoseTalousMenu = ({
   anchorEl,
@@ -12,14 +25,14 @@ const ChoseTalousMenu = ({
   handleTabChange,
   options,
   handleMenuItemClick,
-}: any) => {
+}: IChoseTalousMenu) => {
   return (
     <Menu
       sx={{ marginTop: '10px' }}
       id="lock-menu"
       anchorEl={anchorEl}
       open={open}
-      onClose={handleClose}
+      onClose={() => handleClose()}
       className="MenuItemDefaultColor"
       MenuListProps={{
         'aria-labelledby': 'lock-button',

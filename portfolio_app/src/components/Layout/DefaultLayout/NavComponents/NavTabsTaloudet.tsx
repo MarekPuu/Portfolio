@@ -1,20 +1,24 @@
-import {
-  Box,
-  Divider,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  MenuItem,
-} from '@mui/material';
+import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
 import { IoIosArrowBack } from 'react-icons/io';
+
+interface INavTabsTaloudet {
+  options: string[];
+  selectedIndex: number;
+  handleMenuItemClick: Function;
+  handleTabChange: Function;
+}
 
 const NavTabsTaloudet = ({
   options,
   selectedIndex,
   handleMenuItemClick,
   handleTabChange,
-}: any) => {
+}: INavTabsTaloudet) => {
   return (
     <Box
       sx={{

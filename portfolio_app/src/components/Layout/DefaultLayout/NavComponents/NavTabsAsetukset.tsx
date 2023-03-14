@@ -7,7 +7,6 @@ import {
   ListItemButton,
   Divider,
 } from '@mui/material';
-import React from 'react';
 import { AiFillPlusSquare } from 'react-icons/ai';
 import { FiSettings } from 'react-icons/fi';
 import { IoMdSwap, IoIosArrowForward } from 'react-icons/io';
@@ -15,9 +14,15 @@ import { MdGroupAdd } from 'react-icons/md';
 
 const options = ['Marekin ja lauran talous', 'Marekin Talous', 'Joku talous'];
 
-const NavTabsAsetukset = ({ handleTabChange, selectedIndex }: any) => {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+interface INavTavsAsetukset {
+  handleTabChange: Function;
+  selectedIndex: number;
+}
 
+const NavTabsAsetukset = ({
+  handleTabChange,
+  selectedIndex,
+}: INavTavsAsetukset) => {
   return (
     <Box
       sx={{
